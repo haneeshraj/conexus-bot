@@ -1,9 +1,8 @@
 module.exports = {
   name: "ready",
-  once: true,
   async execute(client) {
     client.user.setPresence({
-      activities: [{ name: "with Glitch Collectives!" }],
+      activities: [{ name: "with Mist!" }],
       status: "online",
     });
 

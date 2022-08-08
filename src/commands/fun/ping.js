@@ -11,11 +11,9 @@ module.exports = {
       if (!interaction.isChatInputCommand()) return;
       await interaction.reply({
         embeds: [
-          new EmbedBuilder().setColor("Green").setTitle("Pong!"),
-          // .setFooter({
-          //   iconURL: interaction.guild.iconURL(),
-          //   text: " | " + interaction.guild.name,
-          // }),
+          new EmbedBuilder()
+            .setColor("Green")
+            .setTitle(`Pong! - ${Date.now() - interaction.createdTimestamp}ms`),
         ],
         ephemeral: true,
       });
